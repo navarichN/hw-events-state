@@ -26,13 +26,12 @@ export default class Portfolio extends Component {
     render() {
         return (
             <div className="portfolio">
-            <Toolbar
-                filters={filters}
-                selected={this.state.filter}
-                onSelectFilter={this.changeDataToDisplay}
-            />
-            <ProjectList projects = {this.state.actualDataToDisplay}/>
-                
+                <Toolbar
+                    filters={filters}
+                    selected={this.state.filter}
+                    onSelectFilter={this.changeDataToDisplay}
+                />
+                <ProjectList projects = {this.state.actualDataToDisplay}/>
             </div>
         )
     }
