@@ -3,14 +3,14 @@ import React from 'react';
 function Toolbar(props) {
     return (
         <div className="toolbar">
-            {props.filters.map((el, i) => {
+            {props.filters.map((filter, i) => {
                 return <button 
                             className = "checked-tag"
-                            onClick = {(e) => {
-                                props.onSelectFilter(e.target.innerHTML)}}
+                            onClick = {() => {
+                                props.onSelectFilter(filter)}}
                             key = {i}
                         >
-                            {el}
+                            {filter}
                         </button>
             })}
         </div>
