@@ -2,51 +2,116 @@
   color: black;
 }
 
-
 .store {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 1000px;
+  max-width: 980px;
   height: 1000px;
 }
 
+.icon-switch {
+  position: relative;
+  left: 42%;
+  font-size: 40px;
+  user-select: none;
+  cursor: pointer;
+}
 
 .cards-view {
   display: flex;
-
+  flex-wrap: wrap;
 }
 
 .shop-card {
-  box-shadow: black;
-  width: 200px;
-  height: 200px;
-}
-.shop-card img {
-  width: 200px;
-  z-index: 4;
-}
-
-.shop-card h2{
-  position: absolute;
-  z-index: 1;
-}
-
-.shop-card span{
-  position: absolute;
-  z-index: 1;
-}
-
-.shop-card button{
-  left: 80px;
-  bottom: 40px;
   position: relative;
+  box-shadow: 0 0 10px rgba(51, 50, 50, 0.5);
+  margin: 40px;
+  width: 240px;
+  height: 220px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.shop-card img {
+  position: relative;
+  left: 23px;
+  top: 5px;
+  width: 82%;
   z-index: 1;
+}
+
+.shop-card h2 {
+  position: absolute;
+  top: 15px;
+  left: 55px;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.shop-card h3 {
+  position: absolute;
+  top: 45px;
+  left: 115px;
+  font-size: 15px;
+  font-weight: normal;
+  z-index: 3;
+}
+.shop-card button {
+  position: relative;
+  z-index: 2;
+}
+.shop-card button, .shop-item button {
+  padding: 7px 8px 20px 8px;
+  font-size: 10px;
+  left: 120px;
+  bottom: 25px;
+  height: 30px;
+  border: 1px solid red;
+  color: red;
+  font-weight: bold;
+  background: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.shop-card span {
+  position: relative;
+  bottom: 23px;
+  right: 50px;
+  font-size: 15px;
+  color: red;
+  z-index: 2;
+}
+
+.list-view {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 980px;
 }
 
 .shop-item {
-  border: 2px solid green;
-  width: 200px;
-  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1px;
+  width: 100%;
+  height: 100px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.shop-item img {
+  height: 100%;
+}
+
+.shop-item button {
+  margin: 30px;
+}
+
+.shop-item span {
+  color: red;
 }

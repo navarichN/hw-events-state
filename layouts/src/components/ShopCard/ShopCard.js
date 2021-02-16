@@ -2,13 +2,14 @@ import toCurrency from '../../funcToCurrency.js';
 import '../../App.css';
 
 export default function ShopCard({el}) {
+    let price = toCurrency(el.price, "USD", "en-EN")
     return (
         <div className="shop-card">
             <h2>{el.name}</h2>
-            <span>{el.color}</span>
+            <h3>{el.color}</h3>
             <img src = {el.img}></img>
             <button>ADD TO CART</button>
-            <span>{el.price}</span>
+            <span>{price}</span>
         </div>
     )
 }
